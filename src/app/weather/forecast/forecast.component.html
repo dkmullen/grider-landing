@@ -1,0 +1,16 @@
+<ul class="list-group">
+    <li class="weather-item list-group-item" *ngFor="let forecast of forecast$ | async">
+        <p class="temp">{{ forecast.temp | number:'1.0-0'}}° </p>
+        <p class="day">{{ forecast.dateString | date: 'E h:m' }}</p>
+        <!-- <p>{{ forecast.humidity | number: '1.0-0' }}%</p> -->
+    </li>
+</ul>
+
+
+<!-- <div *ngFor="let item of currentWeather$ | async">
+    <p>{{ item.location }}</p>
+    <p>{{ item.temp | number: '0.0-0'}}°</p>
+    <p>{{ item.humidity}}%</p>
+    <p>Sunrise: {{ sunrise | date: 'h:mm a'}}</p>
+    <p>Sunset: {{ sunset | date: 'h:mm a' }}</p>
+</div> -->
